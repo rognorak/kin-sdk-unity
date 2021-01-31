@@ -1,10 +1,34 @@
 ![Kin Token](kin-banner.jpg)
-# Kin SDK for Unity
+# Modifid Kin SDK for Unity
+
+# Notes: 
+- This package is for use AS IS, comes with no implied support of any kind.
+- Use at your own risk.
+
+- This library allows the use of the Solana (Kin4) `base-compat 0.4.5` module 
+  with unity.  It is built off the original kin unity referenced below. Additionally it would not have not have been possible without the work of:
+
+ `Will Gikandi` , https://will-gikandi.medium.com/ 
+  https://medium.com/kinblog/tagged/unity-development
+
+- This is a modified fork of the original unity SDK located here: 
+`https://github.com/kinecosystem/kin-sdk-unity`
+
+- Since publishing Assets on the Unity Site seems to require support, which I don't have time to do.  For now I am adding a unity package that can be imported locally to the `Asset Package` folder.
+
+- At this time, the update only supports Android, and builds against
+`Unity 2019.4.18f1`
+
+At this time, the upate only works for IOS.  If anyone wants to try and get IOS working in colaboration, I'm , willing to give it a try.
+
+---
 
 Kin SDK for Unity is responsible for providing access to the Kin native SDKs for managing Kin balance and transactions.
 
 
 ## Android Setup
+
+SEE INSTALL.md for manual installation process.
 
 The Kin plugin uses the Gradle build system on Android. See the [Building with Gradle for Android](https://docs.unity3d.com/Manual/android-gradle-overview.html) section of Unity's documentation and the [Providing a custom build.gradle template](https://docs.unity3d.com/Manual/android-gradle-overview.html) to enable the use of a custom gradle file.
 
@@ -26,8 +50,7 @@ allprojects {
 dependencies {
 
     ...
-        implementation 'com.github.kinecosystem.kin-sdk-android:kin-sdk-lib:1.0.5'
-        implementation 'com.github.kinecosystem.kin-sdk-android:kin-backup-and-restore-lib:1.0.5'
+        implementation 'org.kin.sdk.android:base-compat:0.4.5'
 
 **DEPS**}
 
